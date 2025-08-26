@@ -1,0 +1,15 @@
+[submodule "ThirdParty/ThirdParty/SeetaFace2"]
+	path = ThirdParty/ThirdParty/SeetaFace2
+	url = https://github.com/seetafaceengine/SeetaFace2.git
+[submodule "ThirdParty/SeetaFace2"]
+	path = ThirdParty/SeetaFace2
+	url = https://github.com/seetafaceengine/SeetaFace2.git
+[submodule "ThirdParty/opencv"]
+	path = ThirdParty/opencv
+	url = https://github.com/opencv/opencv.git
+[submodule "ThirdParty/ThirdParty/seetaface2"]
+	path = ThirdParty/ThirdParty/seetaface2
+	url = https://github.com/seetafaceengine/SeetaFace2.git
+[submodule "ThirdParty/seetaface2"]
+	path = ThirdParty/seetaface2
+	url = https://github.com/seetafaceengine/SeetaFace2.git
