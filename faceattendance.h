@@ -1,9 +1,11 @@
 #ifndef FACEATTENDANCE_H
 #define FACEATTENDANCE_H
 
+#include "opencv2/objdetect.hpp"
 #include "opencv2/videoio.hpp"
 #include <QMainWindow>
 #include <opencv2/opencv.hpp>
+#include <qtcpsocket.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,8 +26,15 @@ public:
 
 private:
     Ui::FaceAttendance *ui;
+
     // Camera
     cv::VideoCapture cap;
+    // haar--级联分类器
+    cv::CascadeClassifier cascade;
+
+    // 创建网络套接字，定时器
+    QTcpSocket *socket_;
+    QTimer *timer_;
 
 };
 #endif // FACEATTENDANCE_H

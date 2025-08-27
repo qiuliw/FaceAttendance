@@ -235,19 +235,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="widget_3" native="true">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>40</y>
-      <width>261</width>
-      <height>251</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(143, 240, 164,0.1); border-radius: 10px;</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="videoInfoLabel">
     <property name="geometry">
      <rect>
