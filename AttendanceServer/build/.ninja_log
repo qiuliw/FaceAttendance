@@ -1,0 +1,23 @@
+# ninja log v7
+16	2473	7779807367512185	AttendanceServer_autogen/timestamp	8d677e1af34d3673
+16	2473	7779807367512185	AttendanceServer_autogen/mocs_compilation.cpp	8d677e1af34d3673
+16	2473	7779807367512185	D:/Github/AttendanceServer/build/AttendanceServer_autogen/timestamp	8d677e1af34d3673
+16	2473	7779807367512185	D:/Github/AttendanceServer/build/AttendanceServer_autogen/mocs_compilation.cpp	8d677e1af34d3673
+2474	5043	7779807373202078	CMakeFiles/AttendanceServer.dir/AttendanceServer_autogen/mocs_compilation.cpp.obj	40742f6534ebf62d
+2922	5070	7779807377688934	CMakeFiles/AttendanceServer.dir/main.cpp.obj	d1c742aeeb2f3f2d
+3351	5123	7779807381977629	CMakeFiles/AttendanceServer.dir/attendancewin.cpp.obj	693e7f21f15a46a7
+5124	7996	7779807399702306	AttendanceServer.exe	bd2d86e0aa085aba
+18	2375	7779935348938671	AttendanceServer_autogen/timestamp	8d677e1af34d3673
+18	2375	7779935348938671	AttendanceServer_autogen/mocs_compilation.cpp	8d677e1af34d3673
+18	2375	7779935348938671	D:/Github/AttendanceServer/build/AttendanceServer_autogen/timestamp	8d677e1af34d3673
+18	2375	7779935348938671	D:/Github/AttendanceServer/build/AttendanceServer_autogen/mocs_compilation.cpp	8d677e1af34d3673
+2377	7106	7779935354422763	CMakeFiles/AttendanceServer.dir/AttendanceServer_autogen/mocs_compilation.cpp.obj	2d83a1f93bfb993a
+2775	7111	7779935358405062	CMakeFiles/AttendanceServer.dir/main.cpp.obj	baa713e5433e46eb
+3281	7133	7779935363459187	CMakeFiles/AttendanceServer.dir/attendancewin.cpp.obj	8beb1e2004ace266
+7133	12131	7779935401976341	AttendanceServer.exe	bd2d86e0aa085aba
+12	1885	7779937691150801	AttendanceServer_autogen/timestamp	8d677e1af34d3673
+12	1885	7779937691150801	AttendanceServer_autogen/mocs_compilation.cpp	8d677e1af34d3673
+12	1885	7779937691150801	D:/Github/AttendanceServer/build/AttendanceServer_autogen/timestamp	8d677e1af34d3673
+12	1885	7779937691150801	D:/Github/AttendanceServer/build/AttendanceServer_autogen/mocs_compilation.cpp	8d677e1af34d3673
+1886	3976	7779937709880785	CMakeFiles/AttendanceServer.dir/attendancewin.cpp.obj	8beb1e2004ace266
+3976	7243	7779937730778467	AttendanceServer.exe	bd2d86e0aa085aba

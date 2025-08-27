@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-ab197fdff8c1a6ee46ea.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AttendanceServer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AttendanceServer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AttendanceServer-Debug-40091a73bea3473d98dd.json",
+					"name" : "AttendanceServer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "AttendanceServer_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AttendanceServer_autogen-Debug-ea1020f0583338e057fc.json",
+					"name" : "AttendanceServer_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "AttendanceServer_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AttendanceServer_autogen_timestamp_deps-Debug-630e2d1ad0f846ed3161.json",
+					"name" : "AttendanceServer_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Github/AttendanceServer/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug",
+		"source" : "D:/Github/AttendanceServer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

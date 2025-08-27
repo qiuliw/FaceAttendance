@@ -1,0 +1,8 @@
+D:/Github/AttendanceServer/build/CMakeFiles/AttendanceServer.dir
+D:/Github/AttendanceServer/build/CMakeFiles/edit_cache.dir
+D:/Github/AttendanceServer/build/CMakeFiles/rebuild_cache.dir
+D:/Github/AttendanceServer/build/CMakeFiles/list_install_components.dir
+D:/Github/AttendanceServer/build/CMakeFiles/install.dir
+D:/Github/AttendanceServer/build/CMakeFiles/install/local.dir
+D:/Github/AttendanceServer/build/CMakeFiles/AttendanceServer_autogen_timestamp_deps.dir
+D:/Github/AttendanceServer/build/CMakeFiles/AttendanceServer_autogen.dir
