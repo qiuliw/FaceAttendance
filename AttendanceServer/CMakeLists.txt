@@ -9,15 +9,20 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Network)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Network)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Network Sql)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Network Sql)
 
 set(PROJECT_SOURCES
         main.cpp
         attendancewin.cpp
         attendancewin.h
         attendancewin.ui
+        FaceEngine.h
+        QFaceObject.cpp
+        QFaceObject.h
 )
+
+# ------------------- Qt6 bundle -------------------
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(AttendanceServer
@@ -48,8 +53,12 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_autogen/include_$<CONFIG>  # 自动匹配当前构建配置
 )
 
-
-target_link_libraries(AttendanceServer PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network)
+# 链接 Qt 库
+target_link_libraries(AttendanceServer PRIVATE 
+    Qt${QT_VERSION_MAJOR}::Widgets 
+    Qt${QT_VERSION_MAJOR}::Network
+    Qt${QT_VERSION_MAJOR}::Sql
+)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -75,3 +84,30 @@ install(TARGETS AttendanceServer
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(AttendanceServer)
 endif()
+
+# ------------------- SeetaFace2 & OpenCV 配置 -------------------
+# 头文件目录
+include_directories(
+    D:/Software/SeetaFace2/build/install/include
+    D:/Software/opencv/build/include
+)
+
+set(SEETA_FACE_DIR D:/Software/SeetaFace2/build/install)
+set(OPENCV_DIR D:/Software/opencv/build/x64/vc16)
+
+# 库文件目录
+link_directories(
+    ${SEETA_FACE_DIR}/lib
+    ${OPENCV_DIR}/lib
+)
+
+# SeetaFace2 库 (MSVC 生成的是 .lib)    MSBUILD不支持模糊匹配，只能精确匹配
+target_link_libraries(${PROJECT_NAME} PRIVATE # target_link 需要 target  lib或者exe
+    ${OPENCV_DIR}/lib/opencv_world4120d.lib
+    ${SEETA_FACE_DIR}/lib/SeetaFaceDetector.lib
+    ${SEETA_FACE_DIR}/lib/SeetaFaceRecognizer.lib
+    ${SEETA_FACE_DIR}/lib/SeetaFaceLandmarker.lib
+    ${SEETA_FACE_DIR}/lib/SeetaFaceTracker.lib
+    ${SEETA_FACE_DIR}/lib/SeetaQualityAssessor.lib
+    ${SEETA_FACE_DIR}/lib/SeetaNet.lib
+)

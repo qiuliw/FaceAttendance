@@ -1,12 +1,16 @@
 AttendanceServer_autogen/timestamp: \
-	D:/Github/AttendanceServer/CMakeLists.txt \
-	D:/Github/AttendanceServer/attendancewin.cpp \
-	D:/Github/AttendanceServer/attendancewin.h \
-	D:/Github/AttendanceServer/build/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
-	D:/Github/AttendanceServer/build/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
-	D:/Github/AttendanceServer/build/CMakeFiles/3.29.3/CMakeSystem.cmake \
-	D:/Github/AttendanceServer/main.cpp \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/CMakeLists.txt \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/FaceEngine.h \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/QFaceObject.cpp \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/QFaceObject.h \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/attendancewin.cpp \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/attendancewin.h \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/build/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/build/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/build/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/main.cpp \
 	D:/Software/Qt/6.9.1/msvc2022_64/include/QtCore/QMap \
+	D:/Software/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
 	D:/Software/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
 	D:/Software/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
 	D:/Software/Qt/6.9.1/msvc2022_64/include/QtCore/q20iterator.h \
@@ -364,6 +368,53 @@ AttendanceServer_autogen/timestamp: \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateDependencies.cmake \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateTargets.cmake \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateVersionlessAliasTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginAdditionalTargetInfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginConfig.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets-debug.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginAdditionalTargetInfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginConfig.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-debug.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginAdditionalTargetInfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginConfig.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets-debug.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-debug.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-debug.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-debug.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets-debug.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessAliasTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateAdditionalTargetInfo.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfig.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfigVersion.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfigVersionImpl.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateDependencies.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateTargets.cmake \
+	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateVersionlessAliasTargets.cmake \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake \
@@ -402,35 +453,214 @@ AttendanceServer_autogen/timestamp: \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
 	D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessAliasTargets.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeNinjaFindMake.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeRCInformation.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystem.cmake.in \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckIncludeFileCXX.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckLibraryExists.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/MSVC-CXX.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/MSVC.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindPackageMessage.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindThreads.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindVulkan.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake \
+	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-MSVC-CXX.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows-MSVC.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/Windows.cmake \
 	D:/Software/Qt/Tools/CMake_64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake \
-	D:/Github/AttendanceServer/attendancewin.ui \
+	D:/Software/SeetaFace2/build/install/include/seeta/CFaceInfo.h \
+	D:/Software/SeetaFace2/build/install/include/seeta/CStream.h \
+	D:/Software/SeetaFace2/build/install/include/seeta/CStruct.h \
+	D:/Software/SeetaFace2/build/install/include/seeta/FaceDatabase.h \
+	D:/Software/SeetaFace2/build/install/include/seeta/FaceDetector.h \
+	D:/Software/SeetaFace2/build/install/include/seeta/FaceLandmarker.h \
+	D:/Software/SeetaFace2/build/install/include/seeta/Stream.h \
+	D:/Software/SeetaFace2/build/install/include/seeta/Struct.h \
+	D:/Software/opencv/build/include/opencv2/calib3d.hpp \
+	D:/Software/opencv/build/include/opencv2/core.hpp \
+	D:/Software/opencv/build/include/opencv2/core/affine.hpp \
+	D:/Software/opencv/build/include/opencv2/core/async.hpp \
+	D:/Software/opencv/build/include/opencv2/core/base.hpp \
+	D:/Software/opencv/build/include/opencv2/core/bufferpool.hpp \
+	D:/Software/opencv/build/include/opencv2/core/check.hpp \
+	D:/Software/opencv/build/include/opencv2/core/cuda.hpp \
+	D:/Software/opencv/build/include/opencv2/core/cuda.inl.hpp \
+	D:/Software/opencv/build/include/opencv2/core/cuda_types.hpp \
+	D:/Software/opencv/build/include/opencv2/core/cv_cpu_dispatch.h \
+	D:/Software/opencv/build/include/opencv2/core/cvdef.h \
+	D:/Software/opencv/build/include/opencv2/core/cvstd.hpp \
+	D:/Software/opencv/build/include/opencv2/core/cvstd.inl.hpp \
+	D:/Software/opencv/build/include/opencv2/core/cvstd_wrapper.hpp \
+	D:/Software/opencv/build/include/opencv2/core/fast_math.hpp \
+	D:/Software/opencv/build/include/opencv2/core/hal/interface.h \
+	D:/Software/opencv/build/include/opencv2/core/mat.hpp \
+	D:/Software/opencv/build/include/opencv2/core/mat.inl.hpp \
+	D:/Software/opencv/build/include/opencv2/core/matx.hpp \
+	D:/Software/opencv/build/include/opencv2/core/matx.inl.hpp \
+	D:/Software/opencv/build/include/opencv2/core/neon_utils.hpp \
+	D:/Software/opencv/build/include/opencv2/core/operations.hpp \
+	D:/Software/opencv/build/include/opencv2/core/optim.hpp \
+	D:/Software/opencv/build/include/opencv2/core/ovx.hpp \
+	D:/Software/opencv/build/include/opencv2/core/persistence.hpp \
+	D:/Software/opencv/build/include/opencv2/core/saturate.hpp \
+	D:/Software/opencv/build/include/opencv2/core/traits.hpp \
+	D:/Software/opencv/build/include/opencv2/core/types.hpp \
+	D:/Software/opencv/build/include/opencv2/core/utility.hpp \
+	D:/Software/opencv/build/include/opencv2/core/utils/logger.defines.hpp \
+	D:/Software/opencv/build/include/opencv2/core/utils/logger.hpp \
+	D:/Software/opencv/build/include/opencv2/core/utils/logtag.hpp \
+	D:/Software/opencv/build/include/opencv2/core/version.hpp \
+	D:/Software/opencv/build/include/opencv2/core/vsx_utils.hpp \
+	D:/Software/opencv/build/include/opencv2/dnn.hpp \
+	D:/Software/opencv/build/include/opencv2/dnn/dict.hpp \
+	D:/Software/opencv/build/include/opencv2/dnn/dnn.hpp \
+	D:/Software/opencv/build/include/opencv2/dnn/dnn.inl.hpp \
+	D:/Software/opencv/build/include/opencv2/dnn/layer.hpp \
+	D:/Software/opencv/build/include/opencv2/dnn/utils/inference_engine.hpp \
+	D:/Software/opencv/build/include/opencv2/dnn/version.hpp \
+	D:/Software/opencv/build/include/opencv2/features2d.hpp \
+	D:/Software/opencv/build/include/opencv2/flann.hpp \
+	D:/Software/opencv/build/include/opencv2/flann/all_indices.h \
+	D:/Software/opencv/build/include/opencv2/flann/allocator.h \
+	D:/Software/opencv/build/include/opencv2/flann/any.h \
+	D:/Software/opencv/build/include/opencv2/flann/autotuned_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/composite_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/config.h \
+	D:/Software/opencv/build/include/opencv2/flann/defines.h \
+	D:/Software/opencv/build/include/opencv2/flann/dist.h \
+	D:/Software/opencv/build/include/opencv2/flann/dynamic_bitset.h \
+	D:/Software/opencv/build/include/opencv2/flann/flann_base.hpp \
+	D:/Software/opencv/build/include/opencv2/flann/general.h \
+	D:/Software/opencv/build/include/opencv2/flann/ground_truth.h \
+	D:/Software/opencv/build/include/opencv2/flann/heap.h \
+	D:/Software/opencv/build/include/opencv2/flann/hierarchical_clustering_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/index_testing.h \
+	D:/Software/opencv/build/include/opencv2/flann/kdtree_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/kdtree_single_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/kmeans_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/linear_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/logger.h \
+	D:/Software/opencv/build/include/opencv2/flann/lsh_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/lsh_table.h \
+	D:/Software/opencv/build/include/opencv2/flann/matrix.h \
+	D:/Software/opencv/build/include/opencv2/flann/miniflann.hpp \
+	D:/Software/opencv/build/include/opencv2/flann/nn_index.h \
+	D:/Software/opencv/build/include/opencv2/flann/params.h \
+	D:/Software/opencv/build/include/opencv2/flann/random.h \
+	D:/Software/opencv/build/include/opencv2/flann/result_set.h \
+	D:/Software/opencv/build/include/opencv2/flann/sampling.h \
+	D:/Software/opencv/build/include/opencv2/flann/saving.h \
+	D:/Software/opencv/build/include/opencv2/flann/timer.h \
+	D:/Software/opencv/build/include/opencv2/highgui.hpp \
+	D:/Software/opencv/build/include/opencv2/imgcodecs.hpp \
+	D:/Software/opencv/build/include/opencv2/imgproc.hpp \
+	D:/Software/opencv/build/include/opencv2/imgproc/segmentation.hpp \
+	D:/Software/opencv/build/include/opencv2/ml.hpp \
+	D:/Software/opencv/build/include/opencv2/ml/ml.inl.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect/aruco_board.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect/aruco_detector.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect/aruco_dictionary.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect/barcode.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect/charuco_detector.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect/detection_based_tracker.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect/face.hpp \
+	D:/Software/opencv/build/include/opencv2/objdetect/graphical_code_detector.hpp \
+	D:/Software/opencv/build/include/opencv2/opencv.hpp \
+	D:/Software/opencv/build/include/opencv2/opencv_modules.hpp \
+	D:/Software/opencv/build/include/opencv2/photo.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/blenders.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/camera.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/exposure_compensate.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/matchers.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/motion_estimators.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/seam_finders.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/util.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/util_inl.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/warpers.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/detail/warpers_inl.hpp \
+	D:/Software/opencv/build/include/opencv2/stitching/warpers.hpp \
+	D:/Software/opencv/build/include/opencv2/video.hpp \
+	D:/Software/opencv/build/include/opencv2/video/background_segm.hpp \
+	D:/Software/opencv/build/include/opencv2/video/tracking.hpp \
+	D:/Software/opencv/build/include/opencv2/videoio.hpp \
+	D:/Github/FaceAttendance_Qt/AttendanceServer/attendancewin.ui \
 	D:/Software/Qt/Tools/CMake_64/bin/cmake.exe

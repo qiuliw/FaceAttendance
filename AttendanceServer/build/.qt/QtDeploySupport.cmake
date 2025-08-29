@@ -34,7 +34,7 @@ endif()
 set(__QT_DEPLOY_SYSTEM_NAME "Windows")
 set(__QT_DEPLOY_IS_SHARED_LIBS_BUILD "ON")
 set(__QT_DEPLOY_TOOL "D:/Software/Qt/6.9.1/msvc2022_64/bin/windeployqt.exe")
-set(__QT_DEPLOY_IMPL_DIR "D:/Github/AttendanceServer/build/.qt")
+set(__QT_DEPLOY_IMPL_DIR "D:/Github/FaceAttendance_Qt/AttendanceServer/build/.qt")
 set(__QT_DEPLOY_VERBOSE "")
 set(__QT_CMAKE_EXPORT_NAMESPACE "Qt6")
 set(__QT_DEPLOY_GENERATOR_IS_MULTI_CONFIG "0")
@@ -58,7 +58,7 @@ set(__QT_DEPLOY_QT_DEBUG_POSTFIX "d")
 
 # Define the CMake commands to be made available during deployment.
 set(__qt_deploy_support_files
-    "D:/Github/AttendanceServer/build/.qt/QtDeployTargets.cmake"
+    "D:/Github/FaceAttendance_Qt/AttendanceServer/build/.qt/QtDeployTargets.cmake"
     "D:/Software/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
 )
 foreach(__qt_deploy_support_file IN LISTS __qt_deploy_support_files)

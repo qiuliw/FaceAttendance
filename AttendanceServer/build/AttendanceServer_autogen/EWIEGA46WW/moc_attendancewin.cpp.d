@@ -1,4 +1,4 @@
-D:/Github/AttendanceServer/build/AttendanceServer_autogen/EWIEGA46WW/moc_attendancewin.cpp: D:/Github/AttendanceServer/attendancewin.h \
+D:/Github/FaceAttendance_Qt/AttendanceServer/build/AttendanceServer_autogen/EWIEGA46WW/moc_attendancewin.cpp: D:/Github/FaceAttendance_Qt/AttendanceServer/attendancewin.h \
   D:/Software/Qt/6.9.1/msvc2022_64/include/QtCore/QMap \
   D:/Software/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   D:/Software/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
