@@ -13,53 +13,76 @@
   <property name="windowTitle">
    <string>AttendanceWin</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow {
+    background-color: #f6f8fa;
+}
+QLabel {
+    font-family: &quot;Microsoft YaHei&quot;;
+    font-size: 15px;
+    color: #333333;
+}
+QLineEdit, QDateEdit {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 15px;
+    background: #ffffff;
+}
+QLineEdit:focus, QDateEdit:focus {
+    border: 1px solid #0078d7;
+    background: #f0f8ff;
+}
+QPushButton {
+    background-color: #0078d7;
+    color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: #005a9e;
+}
+QPushButton:pressed {
+    background-color: #003e73;
+}
+#avatarLabel {
+    border: 2px dashed #cccccc;
+    border-radius: 10px;
+    background-color: #fafafa;
+    color: #888888;
+    qproperty-alignment: AlignCenter;
+}
+   </string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="genderWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>60</y>
       <width>181</width>
       <height>32</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="genderLayout">
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
+      <widget class="QLabel" name="genderLabel">
        <property name="text">
         <string>性别：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
+      <widget class="QRadioButton" name="maleRadio">
        <property name="text">
         <string>男</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton_2">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
+      <widget class="QRadioButton" name="femaleRadio">
        <property name="text">
         <string>女</string>
        </property>
@@ -67,193 +90,183 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_2">
+   <widget class="QWidget" name="birthdayWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>110</y>
       <width>181</width>
-      <height>31</height>
+      <height>36</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <layout class="QHBoxLayout" name="birthdayLayout">
      <item>
-      <widget class="QLabel" name="label_3">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
+      <widget class="QLabel" name="birthdayLabel">
        <property name="text">
         <string>生日：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QDateEdit" name="dateEdit"/>
+      <widget class="QDateEdit" name="birthdayEdit"/>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_3">
+   <widget class="QWidget" name="addressWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>160</y>
       <width>181</width>
       <height>35</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="addressLayout">
      <item>
-      <widget class="QLabel" name="label_4">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
+      <widget class="QLabel" name="addressLabel">
        <property name="text">
         <string>地址：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_4">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="addressEdit"/>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_4">
+   <widget class="QWidget" name="phoneWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>210</y>
       <width>181</width>
       <height>35</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <layout class="QHBoxLayout" name="phoneLayout">
      <item>
-      <widget class="QLabel" name="label_5">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
+      <widget class="QLabel" name="phoneLabel">
        <property name="text">
         <string>电话：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_5">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="phoneEdit"/>
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="avatarLabel">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>20</y>
-      <width>201</width>
-      <height>241</height>
+      <x>240</x>
+      <y>10</y>
+      <width>211</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>头像预览</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="addBtn">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>260</y>
       <width>80</width>
-      <height>23</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string>添加</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="resetBtn">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>110</x>
       <y>260</y>
       <width>80</width>
-      <height>23</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string>重置</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="nameWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>10</y>
       <width>181</width>
-      <height>31</height>
+      <height>35</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="nameLayout">
      <item>
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
+      <widget class="QLabel" name="nameLabel">
        <property name="text">
         <string>姓名：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="nameEdit"/>
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="addAvatarBtn">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>260</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>添加头像</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="avatarPathEdit">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>210</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openCameraBtn">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>260</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开摄像头</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="takePhotoBtn">
+    <property name="geometry">
+     <rect>
+      <x>419</x>
+      <y>260</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>拍照</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

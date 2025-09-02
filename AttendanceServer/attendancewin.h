@@ -8,6 +8,7 @@
 #include <QMap>
 #include <memory>
 
+// 前置声明
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class AttendanceWin;

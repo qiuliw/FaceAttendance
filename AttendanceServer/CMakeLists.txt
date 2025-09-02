@@ -20,6 +20,10 @@ set(PROJECT_SOURCES
         FaceEngine.h
         QFaceObject.cpp
         QFaceObject.h
+        registerwin.cpp
+        registerwin.h
+        registerwin.ui
+        
 )
 
 # ------------------- Qt6 bundle -------------------

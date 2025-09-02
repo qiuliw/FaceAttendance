@@ -5,6 +5,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QDebug>
+#include "registerwin.h"
 
 int main(int argc, char *argv[])
 {
@@ -47,9 +48,13 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    
+    // 创建人脸信息表
+    // AttendanceWin w;
+    // w.show();
 
-    AttendanceWin w;
-    w.show();
+    RegisterWin r;
+    r.show();
+
     return a.exec();
+
 }

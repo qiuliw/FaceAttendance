@@ -12,7 +12,9 @@ QFaceObject::QFaceObject(QObject *parent) : QObject(parent)
     // faceEnginePtr_ = FaceEnginePtr(new seeta::FaceEngine(fdModel,pdModel,frModel));
     faceEnginePtr_ = std::make_unique<seeta::FaceEngine>(fdModel,pdModel,frModel);
     
-}   
+    // 加载数据库，没有会自动创建
+    faceEnginePtr_->Load("./face.db");
+}
 
 QFaceObject::~QFaceObject()
 {
