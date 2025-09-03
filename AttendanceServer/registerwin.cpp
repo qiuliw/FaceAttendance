@@ -1,8 +1,10 @@
 #include "registerwin.h"
 #include "./ui_registerwin.h"
 #include "QFaceobject.h"
+#include "opencv2/imgcodecs.hpp"
 
 #include <qdatetime.h>
+#include <qimage.h>
 #include <qpixmap.h>
 #include <QFileDialog>
 #include <opencv2/core/mat.hpp>
@@ -33,6 +35,20 @@ RegisterWin::~RegisterWin()
     delete ui;
 }
 
+void RegisterWin::timerEvent(QTimerEvent *e)
+{
+    // 获取摄像头数据并且显示在界面上
+    if(!cap_.isOpened()) return;
+    cap_>>image_;
+    if(image_.empty()) return;
+    // Mat >> QImage
+    cv::Mat rgbImage;
+    cv::cvtColor(image_, rgbImage, cv::COLOR_BGR2RGB); // 转换为RGB
+    QImage qimage(rgbImage.data,rgbImage.cols, rgbImage.rows,rgbImage.step1(), QImage::Format_RGB888);
+    // 在qt界面上显示
+    ui->avatarLabel->setPixmap(QPixmap::fromImage(qimage).scaledToWidth(ui->avatarLabel->width()));
+}
+
 /*
     拍照 --> 文件 --> 路径 --> 数据库
     打开文件 --> 路径 --> 数据库
@@ -41,54 +57,45 @@ RegisterWin::~RegisterWin()
 // 注册
 void RegisterWin::onAddBtnClicked()
 {
-    // 1. 检查必要字段是否为空
+    // 1. 基本检查
     if (ui->nameEdit->text().isEmpty()) {
         QMessageBox::warning(this, "注册提示", "请输入姓名");
         return;
     }
-    
-    if (ui->avatarPathEdit->text().isEmpty()) {
-        QMessageBox::warning(this, "注册提示", "请选择头像");
+    if (image_.empty()) {
+        QMessageBox::warning(this, "注册提示", "请先选择头像或拍照");
         return;
     }
-    
-    // 2. 检查头像文件是否存在
-    QString avatarPath = ui->avatarPathEdit->text();
-    QFile avatarFile(avatarPath);
-    if (!avatarFile.exists()) {
-        QMessageBox::warning(this, "注册提示", "头像文件不存在，请重新选择");
+
+    // 2. 生成头像最终保存路径
+    QString safeName = QString(ui->nameEdit->text().toUtf8().toBase64());
+    QString headfile = QString("./data/%1.jpg").arg(safeName);
+
+    // 确保目录存在
+    QDir().mkpath("./data");
+
+    // 3. 把 image_ 保存到 ./data
+    if(!cv::imwrite(headfile.toStdString(), image_)){
+        QMessageBox::warning(this,"注册提示","无法保存头像文件");
         return;
     }
-    
-    // 3. 通过照片，结合faceObject模块得到faceID
+    // 显示目录
+    ui->avatarPathEdit->setText(headfile);
+
+    // 4. 人脸注册
     QFaceObject faceObj;
-    cv::Mat image = cv::imread(avatarPath.toUtf8().data());
-    if (image.empty()) {
-        QMessageBox::warning(this, "注册提示", "无法读取头像文件，请选择有效的图片文件");
-        return;
-    }
-    
-    int faceID = faceObj.faceRegister(image);
+    int faceID = faceObj.faceRegister(image_);
     if (faceID == -1) {
         QMessageBox::warning(this, "注册提示", "人脸注册失败，请确保照片中包含清晰的人脸");
         return;
     }
-    
-    // 确保data目录存在
-    QDir dataDir("./data");
-    if (!dataDir.exists()) {
-        dataDir.mkpath("./data");
-    }
-    
-    // 先转 UTF-8，再 Base64，保证文件名只包含安全字符，避免特殊符号或跨平台兼容问题
-    QString headfile = QString("./data/%1.jpg").arg(QString(ui->nameEdit->text().toUtf8().toBase64()));
-    
-    // 2. 把个人信息存储到数据库employee
+
+    // 把个人信息存储到数据库employee
     QSqlTableModel model;
     model.setTable("employee"); // 表名
     QSqlRecord record = model.record();
 
-    // 3. 设置数据
+    // 设置数据
     record.setValue("name", ui->nameEdit->text());
     record.setValue("birthday", ui->birthdayEdit->date());
     record.setValue("sex", ui->maleRadio->isChecked()? "男" : "女");
@@ -101,16 +108,11 @@ void RegisterWin::onAddBtnClicked()
     bool ret = model.insertRecord(-1, record);
 
     if (ret) {
-        // 提交
-        if (model.submitAll()) {
-            // 实际复制头像文件到data目录
-            QFile::copy(avatarPath, headfile);
-            QMessageBox::information(this, "注册提示", "注册成功");
-        } else {
-            QMessageBox::warning(this, "注册提示", "注册失败: " + model.lastError().text());
-        }
+        // 插入成功
+        QMessageBox::information(this, "注册提示", "注册成功");
     } else {
-        QMessageBox::warning(this, "注册提示", "注册失败: " + model.lastError().text());
+        // 插入失败
+        QMessageBox::warning(this, "注册提示", "注册失败，请稍后重试");
     }
 }
 
@@ -126,28 +128,50 @@ void RegisterWin::onResetBtnClicked()
     ui->avatarLabel->clear();
     ui->avatarPathEdit->clear();
 }
-
-// 添加头像
+// 选择头像
 void RegisterWin::onAddAvatarBtnClicked()
 {
-    // 通过文件对话框，选中图片路径
     QString filepath = QFileDialog::getOpenFileName(this, "选择头像", "C:/", "*.png *.jpg *.jpeg");
-    ui->avatarPathEdit->setText(filepath);
+    if(filepath.isEmpty()) return;
 
-    // 显示图片
-    QPixmap pixmap(filepath);
-    pixmap = pixmap.scaled(ui->avatarLabel->size(), Qt::KeepAspectRatio);
-    ui->avatarLabel->setPixmap(pixmap);
+    image_ = cv::imread(filepath.toStdString());   // 直接读进 image_
+    if(image_.empty()){
+        QMessageBox::warning(this,"提示","无法读取图片");
+        return;
+    }
+
+    // 预览
+    cv::Mat rgb;
+    cv::cvtColor(image_, rgb, cv::COLOR_BGR2RGB);
+    QImage img(rgb.data, rgb.cols, rgb.rows, rgb.step, QImage::Format_RGB888);
+    ui->avatarLabel->setPixmap(QPixmap::fromImage(img).scaledToWidth(ui->avatarLabel->width()));
+
+    ui->avatarPathEdit->clear();   // 不再记录原路径
 }
-
 // 打开摄像头
 void RegisterWin::onOpenCameraBtnClicked()
 {
+    if(ui->openCameraBtn->text() == "打开摄像头"){
+        if(cap_.open(0)){
+            ui->openCameraBtn->setText("关闭摄像头");
+            timerId_ = startTimer(100);     
+        }
+    }else{
+        killTimer(timerId_);
+        ui->openCameraBtn->setText("打开摄像头");
+        ui->avatarLabel->clear();
+        cap_.release();
+    }
     
 }
 
 // 拍照
 void RegisterWin::onTakePhotoBtnClicked()
 {
-    
+    if(!cap_.isOpened()) return;
+
+    // 摄像头当前帧已经在 image_ 里，直接保留即可
+    killTimer(timerId_);
+    ui->openCameraBtn->setText("打开摄像头");
+    cap_.release();
 }

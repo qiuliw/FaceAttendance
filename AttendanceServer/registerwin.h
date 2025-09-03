@@ -1,4 +1,5 @@
 #pragma once
+#include "opencv2/videoio.hpp"
 #include <QMainWindow>
 #include <QTcpServer>
 #include <QTcpSocket>
@@ -22,6 +23,7 @@ class RegisterWin : public QMainWindow
 public:
     RegisterWin(QWidget *parent = nullptr);
     ~RegisterWin();
+    void timerEvent(QTimerEvent *e) override;
 
 public slots:
     
@@ -34,5 +36,8 @@ public slots:
 
 private:
     Ui::RegisterWin *ui;
+    int timerId_;
+    cv::VideoCapture cap_;
+    cv::Mat image_;
 
 };
