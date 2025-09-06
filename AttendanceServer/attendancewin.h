@@ -8,6 +8,7 @@
 #include <qsqltablemodel.h>
 #include <qtcpsocket.h>
 #include <QMap>
+#include <QDateTime>
 #include <memory>
 
 // 前置声明
@@ -44,6 +45,9 @@ private:
 
     QFaceObject fobj_; // 识别引擎
     QSqlTableModel model_; // 数据库模型
+    
+    // 存储每个人脸最后一次识别的时间（毫秒）
+    QMap<int, qint64> lastRecognitionTime_;
 
 };
 #endif // ATTENDANCEWIN_H

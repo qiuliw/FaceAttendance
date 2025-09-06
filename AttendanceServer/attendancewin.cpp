@@ -74,10 +74,20 @@ AttendanceWin::AttendanceWin(QWidget *parent)
             memcpy(decode.data(), resource->data.data(), resource->data.size());
             faceImage = cv::imdecode(decode, cv::IMREAD_COLOR);
 
-            int faceID = fobj_.faceQuery(faceImage);
+            int faceID = fobj_.faceQuery(faceImage); // 消耗资源较多，可以在新线程中处理
             qDebug() << faceID;
 
             if(faceID == -1) return;
+
+            // 检查是否是同一人脸在短时间内重复发送
+            qint64 currentTime = QDateTime::currentMSecsSinceEpoch();
+            if (this->lastRecognitionTime_.contains(faceID) && 
+                (currentTime - this->lastRecognitionTime_[faceID]) < 30000) { // 30秒内同一人脸不再发送
+                return;
+            }
+            
+            // 更新此人脸的最后识别时间
+            this->lastRecognitionTime_[faceID] = currentTime;
 
             // 从数据库中查询faceID对应的数据
             model_.setFilter(QString("faceID = %1").arg(faceID));
