@@ -16,7 +16,7 @@ class RegisterWin;
 }
 QT_END_NAMESPACE
 
-
+// 服务端本地注册窗口
 class RegisterWin : public QMainWindow
 { 
     Q_OBJECT

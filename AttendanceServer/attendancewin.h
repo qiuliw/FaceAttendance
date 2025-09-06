@@ -1,9 +1,11 @@
 #ifndef ATTENDANCEWIN_H
 #define ATTENDANCEWIN_H
 
+#include "QFaceObject.h"
 #include <QMainWindow>
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <qsqltablemodel.h>
 #include <qtcpsocket.h>
 #include <QMap>
 #include <memory>
@@ -22,6 +24,7 @@ struct ClientResource {
     // 可以添加更多客户端相关的资源字段
 };
 
+// 可视化的服务端考勤窗口
 class AttendanceWin : public QMainWindow
 {
     Q_OBJECT
@@ -38,6 +41,9 @@ private:
     
     // 为每个客户端连接维护独立的资源结构体
     QMap<QTcpSocket*, std::shared_ptr<ClientResource>> clientResources_;
+
+    QFaceObject fobj_; // 识别引擎
+    QSqlTableModel model_; // 数据库模型
 
 };
 #endif // ATTENDANCEWIN_H

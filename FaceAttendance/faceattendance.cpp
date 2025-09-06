@@ -50,6 +50,9 @@ FaceAttendance::FaceAttendance(QWidget *parent)
         qDebug() << "已连接服务器...";
     });
 
+    // 关联接受数据的槽函数
+    connect(socket_, &QTcpSocket::readyRead, this,&FaceAttendance::RecvData);
+
     // 启动定时器
     timer_->start(5000); // 每5秒尝试一次连接，直到连接成功就不再连接
 
@@ -128,5 +131,11 @@ void FaceAttendance::timerEvent(QTimerEvent *event)
     // 将处理好的图像设置到videoWidget控件上进行显示
     ui->videoLabel->setPixmap(pixmap);
 
+}
+
+void FaceAttendance::RecvData()
+{
+    QString msg = socket_->readAll();
+    qDebug() << msg;
 }
 

@@ -1,12 +1,25 @@
 #include "attendancewin.h"
 #include "./ui_attendancewin.h"
+#include "opencv2/imgcodecs.hpp"
+
+#include <cstring>
+#include <qdatetime.h>
+#include <qobject.h>
 #include <qpixmap.h>
+#include <qsqlrecord.h>
+#include <vector>
+
+#include "FaceEngine.h"
+#include "qsqlquery.h"
 
 AttendanceWin::AttendanceWin(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::AttendanceWin)
 {
     ui->setupUi(this);
+
+    // 给sql模型绑定表格
+    model_.setTable("employee");
 
     /*
         = 捕捉 this 指针
@@ -46,11 +59,43 @@ AttendanceWin::AttendanceWin(QWidget *parent)
                 return;
             // 数据完整
             resource->bsize = 0; 
+
+            // 显示图片
             QPixmap mmp;
             mmp.loadFromData(resource->data, "jpg");
             // 修复图像缩放问题：需要使用scaled方法的返回值
             QPixmap scaledMmp = mmp.scaled(ui->pictureLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
             ui->pictureLabel->setPixmap(scaledMmp);
+
+            // 识别人脸
+            cv::Mat faceImage;
+            std::vector<uchar> decode;
+            decode.resize(resource->data.size());
+            memcpy(decode.data(), resource->data.data(), resource->data.size());
+            faceImage = cv::imdecode(decode, cv::IMREAD_COLOR);
+
+            int faceID = fobj_.faceQuery(faceImage);
+            qDebug() << faceID;
+
+            if(faceID == -1) return;
+
+            // 从数据库中查询faceID对应的数据
+            model_.setFilter(QString("faceID = %1").arg(faceID));
+            model_.select();
+            if(model_.rowCount() == 1){
+                // 工号，姓名，部门，时间
+                // {employeeUD:%1, name:%2, department:%3, time:%4}
+                QSqlRecord record = model_.record(0);
+                QString sdmsg = QString("{\"employeeID\":\"%1\", \"name\":\"%2\", \"department\":\"%3\", \"time\":\"%4\"}")
+                .arg(record.value("employeeID").toString())
+                .arg(record.value("name").toString())
+                .arg(record.value("department").toString())
+                .arg(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
+                clientSocket->write(sdmsg.toUtf8());
+
+                // 把数据写入数据库--考勤表
+                
+            }
         });
         
         // 客户端断开连接时清理资源

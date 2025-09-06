@@ -6,6 +6,7 @@
 #include <QMainWindow>
 #include <opencv2/opencv.hpp>
 #include <qtcpsocket.h>
+#include <qtmetamacros.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,6 +24,9 @@ public:
 
     // 定时器事件
     void timerEvent(QTimerEvent *event);
+
+public slots:
+    void RecvData();
 
 private:
     Ui::FaceAttendance *ui;

@@ -108,11 +108,16 @@ void RegisterWin::onAddBtnClicked()
     bool ret = model.insertRecord(-1, record);
 
     if (ret) {
-        // 插入成功
-        QMessageBox::information(this, "注册提示", "注册成功");
+        // 插入成功，提交到数据库
+        if (model.submitAll()) {
+            QMessageBox::information(this, "注册提示", "注册成功");
+        } else {
+            // 提交失败，显示具体错误信息
+            QMessageBox::warning(this, "注册提示", "注册失败: " + model.lastError().text());
+        }
     } else {
-        // 插入失败
-        QMessageBox::warning(this, "注册提示", "注册失败，请稍后重试");
+        // 插入失败，显示具体错误信息
+        QMessageBox::warning(this, "注册提示", "注册失败: " + model.lastError().text());
     }
 }
 

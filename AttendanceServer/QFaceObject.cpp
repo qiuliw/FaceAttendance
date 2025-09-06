@@ -37,7 +37,6 @@ int64_t QFaceObject::faceRegister(cv::Mat& image)
     }
 
     return faceId;
-
 }
 
 int64_t QFaceObject::faceQuery(cv::Mat& image)

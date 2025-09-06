@@ -49,9 +49,10 @@ int main(int argc, char *argv[])
     }
 
     // 创建人脸信息表
-    // AttendanceWin w;
-    // w.show();
+    AttendanceWin w;
+    w.show();
 
+    // 注册录入
     RegisterWin r;
     r.show();
 
