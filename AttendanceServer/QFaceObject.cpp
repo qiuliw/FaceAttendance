@@ -1,5 +1,6 @@
 #include "QFaceObject.h"
 #include <qdebug.h>
+#include <qtmetamacros.h>
 #include <seeta/Struct.h>
 
 QFaceObject::QFaceObject(QObject *parent) : QObject(parent)
@@ -39,16 +40,24 @@ int64_t QFaceObject::faceRegister(cv::Mat& image)
     return faceId;
 }
 
-int64_t QFaceObject::faceQuery(cv::Mat& image)
+// 查询人脸
+// QFaceObject.cpp
+void QFaceObject::faceQuery(cv::Mat image, qint64 requestId)
 {
-    // 把图片转换成SeetaImageData
     SeetaImageData seetaImage;
     seetaImage.data = image.data;
     seetaImage.width = image.cols;
     seetaImage.height = image.rows;
     seetaImage.channels = image.channels();
-    float similarity; // 相似度
-    int64_t faceId = faceEnginePtr_->Query(seetaImage,&similarity);
-    return faceId;
+
+    int64_t faceID = faceEnginePtr_->Query(seetaImage);
+
+    if(faceID < 0){
+        qDebug() << "未找到人脸";
+    }else{
+        qDebug() << "查询成功，人脸ID为：" << faceID;
+    }
+
+    emit faceQueryResult(faceID, requestId);
 }
 

@@ -2,6 +2,7 @@
 #define ATTENDANCEWIN_H
 
 #include "QFaceObject.h"
+#include "opencv2/core/mat.hpp"
 #include <QMainWindow>
 #include <QTcpServer>
 #include <QTcpSocket>
@@ -10,6 +11,7 @@
 #include <QMap>
 #include <QDateTime>
 #include <memory>
+#include <qtmetamacros.h>
 
 // 前置声明
 QT_BEGIN_NAMESPACE
@@ -34,6 +36,11 @@ public:
     AttendanceWin(QWidget *parent = nullptr);
     ~AttendanceWin();
 
+    void faceIDMatch(int64_t faceID, qint64 requestId); // 在数据库中查找员工信息，并记录到考勤表，回送
+
+signals:
+    void query(cv::Mat image, qint64 requestId);
+
 private:
     Ui::AttendanceWin *ui;
 
@@ -48,6 +55,9 @@ private:
     
     // 存储每个人脸最后一次识别的时间（毫秒）
     QMap<int, qint64> lastRecognitionTime_;
+
+    QMap<qint64, QTcpSocket*> requestSocketMap_;  // requestId -> socket
+    qint64 nextRequestId_ = 1;                    // 自增请求ID
 
 };
 #endif // ATTENDANCEWIN_H

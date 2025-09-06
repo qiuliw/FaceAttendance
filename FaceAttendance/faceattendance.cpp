@@ -10,6 +10,8 @@
 #include <vector>
 #include <QTcpSocket>
 #include <QTimer>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 using namespace cv;
 
@@ -133,9 +135,44 @@ void FaceAttendance::timerEvent(QTimerEvent *event)
 
 }
 
+
 void FaceAttendance::RecvData()
 {
-    QString msg = socket_->readAll();
-    qDebug() << msg;
-}
+    static quint64 blockSize = 0;
+    QDataStream in(socket_);
+    in.setVersion(QDataStream::Qt_5_14);
 
+    // 如果长度还没读出来
+    if (blockSize == 0) {
+        if (socket_->bytesAvailable() < (int)sizeof(quint64))
+            return; // 长度还没收全，等下次
+        in >> blockSize;
+    }
+
+    // 判断数据是否完整
+    if (socket_->bytesAvailable() < blockSize)
+        return; // 数据还没收全，等下次
+
+    // 读取 JSON 数据
+    QByteArray jsonData;
+    jsonData.resize(blockSize);
+    in.readRawData(jsonData.data(), blockSize);
+
+    blockSize = 0; // 重置，准备下次读取
+
+    // 解析 JSON
+    QJsonParseError err;
+    QJsonDocument doc = QJsonDocument::fromJson(jsonData, &err);
+    if (err.error != QJsonParseError::NoError) {
+        qDebug() << "JSON 解析失败:" << err.errorString();
+        return;
+    }
+
+    QJsonObject obj = doc.object();
+    ui->idLabel->setText(obj["employeeID"].toString());
+    ui->nameLabel->setText(obj["name"].toString());
+    ui->departmentLabel->setText(obj["department"].toString());
+    ui->timeLabel->setText(obj["time"].toString());
+
+    qDebug() << "收到 JSON:" << obj;
+}
