@@ -14,24 +14,66 @@
    <string>AttendanceWin</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="pictureLabel">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>300</width>
-      <height>300</height>
+      <x>10</x>
+      <y>10</y>
+      <width>461</width>
+      <height>281</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(108, 255, 133);</string>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
-    <property name="text">
-     <string/>
-    </property>
+    <widget class="QWidget" name="attendanceVideoTab">
+     <attribute name="title">
+      <string>考勤图像</string>
+     </attribute>
+     <widget class="QLabel" name="pictureLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>331</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(108, 255, 133);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="RegisterWin" name="registerTab">
+     <attribute name="title">
+      <string>注册</string>
+     </attribute>
+    </widget>
+    <widget class="SelectWin" name="attendanceTab">
+     <attribute name="title">
+      <string>考勤记录</string>
+     </attribute>
+    </widget>
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RegisterWin</class>
+   <extends>QWidget</extends>
+   <header>registerwin.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SelectWin</class>
+   <extends>QWidget</extends>
+   <header>selectwin.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

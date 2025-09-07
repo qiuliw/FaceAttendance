@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SelectWin</class>
+ <widget class="QWidget" name="SelectWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>员工/考勤查询</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget {
+    background-color: #f5f7fa;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+QRadioButton {
+    spacing: 8px;
+}
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+}
+QRadioButton::indicator:checked {
+    background-color: #4a90e2;
+    border: 2px solid #357ab7;
+    border-radius: 7px;
+}
+QPushButton {
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 12px;
+}
+QPushButton:hover {
+    background-color: #357ab7;
+}
+QTableView {
+    border: 1px solid #dcdfe6;
+    gridline-color: #dcdfe6;
+    selection-background-color: #4a90e2;
+    alternate-background-color: #f9f9f9;
+}
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>20</number>
+     </property>
+     <item>
+      <widget class="QRadioButton" name="attendanceBtn">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);</string>
+       </property>
+       <property name="text">
+        <string>考勤</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="employeeBtn">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);</string>
+       </property>
+       <property name="text">
+        <string>员工</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="selectBtn">
+       <property name="text">
+        <string>查询</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableView" name="tableView"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -23,7 +23,9 @@ set(PROJECT_SOURCES
         registerwin.cpp
         registerwin.h
         registerwin.ui
-        
+        selectwin.cpp
+        selectwin.h
+        selectwin.ui
 )
 
 # ------------------- Qt6 bundle -------------------
@@ -115,11 +117,3 @@ target_link_libraries(${PROJECT_NAME} PRIVATE # target_link 需要 target  lib�
     ${SEETA_FACE_DIR}/lib/SeetaQualityAssessor.lib
     ${SEETA_FACE_DIR}/lib/SeetaNet.lib
 )
-
-
-# 如果需要控制台输出，添加以下行
-if(WIN32)
-    set_target_properties(${PROJECT_NAME} PROPERTIES
-        WIN32_EXECUTABLE OFF
-    )
-endif()
